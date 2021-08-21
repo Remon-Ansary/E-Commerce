@@ -1,25 +1,48 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react'
+import firebase from './firebase'
+import Login from './auth/Login';
+import Welcome from './auth/Welcome'
+import "./App.css"
+class App extends React.Component {
 
-function App() {
+  constructor(props) {
+    super(props);
+    this.state={
+    user:{}
+    }
+  }
+  componentDidMount(){
+    this.authListener();
+
+  }
+  authListener(){
+    firebase.auth().onAuthStateChanged((user)=>{
+      if(user){
+        this.setState({user})
+      }
+      else{
+        this.setState({user : null})
+      }
+  })
+  }
+
+ 
+  handleChange = ({ target }) => {
+    const { name, value } = target;
+    this.setState({ [name]: value });
+  };
+
+
+  render() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      
+      {this.state.user ? (<Welcome/>):(<Login/>) }
+     
     </div>
   );
 }
-
+}
 export default App;
