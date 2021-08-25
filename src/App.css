@@ -1,67 +1,162 @@
 body {
-  font-family: 'Montserrat', sans-serif;
-  transition: 3s;
+  color: #000;
+  overflow-x: hidden;
+  height: 100%;
+  background-image: linear-gradient(to right, #D500F9, #FFD54F);
+  background-repeat: no-repeat
 }
 
-.login-container {
-  margin-top: 10%;
-  border: 1px solid #CCD1D1;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  max-width: 50%;
+input,
+textarea {
+  background-color: #F3E5F5;
+  border-radius: 50px !important;
+  padding: 12px 15px 12px 15px !important;
+  width: 100%;
+  box-sizing: border-box;
+  border: none !important;
+  border: 1px solid #F3E5F5 !important;
+  font-size: 16px !important;
+  color: #000 !important;
+  font-weight: 400
 }
 
-.ads {
-  background-color: #A569BD;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+input:focus,
+textarea:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 1px solid #D500F9 !important;
+  outline-width: 0;
+  font-weight: 400
+}
+
+button:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  outline-width: 0
+}
+
+.card {
+  border-radius: 0;
+  border: none
+}
+
+.card1 {
+  width: 50%;
+  padding: 40px 30px 10px 30px
+}
+
+.card2 {
+  width: 50%;
+  background-image: linear-gradient(to right, #FFD54F, #D500F9)
+}
+
+#logo {
+  width: 70px;
+  height: 60px
+}
+
+.heading {
+  margin-bottom: 60px !important
+}
+
+::placeholder {
+  color: #000 !important;
+  opacity: 1
+}
+
+:-ms-input-placeholder {
+  color: #000 !important
+}
+
+::-ms-input-placeholder {
+  color: #000 !important
+}
+
+.form-control-label {
+  font-size: 12px;
+  margin-left: 15px
+}
+
+.msg-info {
+  padding-left: 15px;
+  margin-bottom: 30px
+}
+
+.btn-color {
+  border-radius: 50px;
   color: #fff;
+  background-image: linear-gradient(to right, #FFD54F, #D500F9);
   padding: 15px;
-  text-align: center;
+  cursor: pointer;
+  border: none !important;
+  margin-top: 40px
 }
 
-.ads h1 {
-  margin-top: 20%;
+.btn-color:hover {
+  color: #fff;
+  background-image: linear-gradient(to right, #D500F9, #FFD54F)
 }
 
-#fl {
-  font-weight: 600;
+.btn-white {
+  border-radius: 50px;
+  color: #D500F9;
+  background-color: #fff;
+  padding: 8px 40px;
+  cursor: pointer;
+  border: 2px solid #D500F9 !important
 }
 
-#sl {
-  font-weight: 100 !important;
+.btn-white:hover {
+  color: #fff;
+  background-image: linear-gradient(to right, #FFD54F, #D500F9)
 }
 
-.profile-img {
-  text-align: center;
+a {
+  color: #000
 }
 
-.profile-img img {
-  border-radius: 50%;
-  /* animation: mymove 2s infinite; */
+a:hover {
+  color: #000
 }
 
-@keyframes mymove {
-  from {border: 1px solid #F2F3F4;}
-  to {border: 8px solid #F2F3F4;}
+.bottom {
+  width: 100%;
+  margin-top: 50px !important
 }
 
-.login-form {
-  padding: 15px;
+.sm-text {
+  font-size: 15px
 }
 
-.login-form h3 {
-  text-align: center;
-  padding-top: 15px;
-  padding-bottom: 15px;
+@media screen and (max-width: 992px) {
+  .card1 {
+      width: 100%;
+      padding: 40px 30px 10px 30px
+  }
+
+  .card2 {
+      width: 100%
+  }
+
+  .right {
+      margin-top: 100px !important;
+      margin-bottom: 100px !important
+  }
 }
 
-.form-control {
-  font-size: 14px;
-}
+@media screen and (max-width: 768px) {
+  .container {
+      padding: 10px !important
+  }
 
-.forget-password a {
-  font-weight: 500;
-  text-decoration: none;
-  font-size: 14px;
+  .card2 {
+      padding: 50px
+  }
+
+  .right {
+      margin-top: 50px !important;
+      margin-bottom: 50px !important
+  }
 }
