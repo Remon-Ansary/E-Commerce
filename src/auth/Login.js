@@ -1,7 +1,6 @@
 import React from 'react'
 import firebase from '../firebase'
-
-
+import "../css/Login.css"
 class Login extends React.Component {
 
     constructor(props) {
@@ -64,7 +63,7 @@ class Login extends React.Component {
             // <button onClick={this.signup}>Signup</button>
             // </div>
 
-            <div>
+            <div className="login-body">
                 <div className="container px-4 py-5 mx-auto">
                     <div className="card card0">
                         <div className="d-flex flex-lg-row flex-column-reverse">
@@ -80,7 +79,7 @@ class Login extends React.Component {
                                              type="email"
                                              id="email"
                                              name="email"
-                                             placeholder="enter email address"
+                                             placeholder="Enter email address"
                                              onChange={this.handleChange}
                                              value={this.state.email}
                                             className="form-control" />
@@ -93,12 +92,12 @@ class Login extends React.Component {
                                           type= "password"
                                           onChange={this.handleChange}
                                           id="password"
-                                          placeholder="enter password"
+                                          placeholder="Enter password"
                                           value={this.state.password}
                                          className="form-control" /> 
                                          
                                          </div>
-                                        <div className="row justify-content-center my-3 px-3"> <button  onClick={this.login} className="btn-block btn-color">Login to Tidi</button> </div>
+                                        <div className="row justify-content-center my-3 px-3"> <button  onClick={this.login} className="btn-block btn-color">Login</button> </div>
                                         <div className="row justify-content-center my-2"> <a href="#"><small className="text-muted">Forgot Password?</small></a> </div>
                                     </div>
                                 </div>

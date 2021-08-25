@@ -1,9 +1,9 @@
-import './App.css';
+
 import React from 'react'
 import firebase from './firebase'
 import Login from './auth/Login';
 import Welcome from './auth/Welcome'
-import "./App.css"
+
 class App extends React.Component {
 
   constructor(props) {
