@@ -131,7 +131,7 @@
   }
   
   @media screen and (max-width: 992px) {
-    .card {
+    .card{
         width: 100%;
         padding: 40px 30px 10px 30px
     }
