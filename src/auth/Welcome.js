@@ -7,7 +7,7 @@ class Welcome extends React.Component {
     this.state = {
       items: [],
       isLoaded: false,
-
+      
     }
   }
   componentDidMount() {
@@ -41,9 +41,6 @@ class Welcome extends React.Component {
     return (
 
       <div>
-
-
-
         <div class="container">
           <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid"> <a class="navbar-brand name" href="#">Remon's Ecommerce</a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
@@ -51,8 +48,11 @@ class Welcome extends React.Component {
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#">About</a> </li>
                   <li class="nav-item"> <a class="nav-link" href="#">Categories</a> </li>
-                  <li class="nav-item"> <a class="nav-link" href="#">Blog</a> </li>
+                  <a href="cart.html" class="icons-btn d-inline-block bag" />
+                  <span class="icon-shopping-bag"></span>
                   <li class="nav-item"> <a class="nav-link" href="#">Contact</a> </li>
+                 
+                 
                   <li class="nav-item" > <a class="nav-link" href="#" onClick={this.logout}>Logout</a> </li>
 
                 </ul>
@@ -60,7 +60,7 @@ class Welcome extends React.Component {
               </div>
             </div>
           </nav>
-          <div class="d-flex justify-content-center align-items-center mt-5"> <button class="btn btn-dark">OUR CATEGORIES</button> </div>
+          <div class="d-flex justify-content-center align-items-center mt-5"> <button class="btn btn-dark">OUR PRODUCTS</button> </div>
           <div class="d-flex justify-content-center mt-3"> <span class="text text-center">Finding Best Products Now in Your Fingertips </span> </div>
           <div class="row mt-2 g-4">
             {/* <div class="col-md-3">
@@ -72,24 +72,20 @@ class Welcome extends React.Component {
               </div>
             </div> */}
             {items.map(item => (
-              // <li key={item.id}>
-              //   <h3>{item.title}</h3>
-              //   <p>{item.body}</p>
-              // </li>
 
               <div class="col-md-4 mt-2">
-                <div class="card">
+                <div class="card welcome">
                   <div class="card-body">
-                    <div class="card-img-actions"> <img src={item.image} class="card-img img-fluid" width="96" height="350" alt="" /> </div>
+                    <div class="card-img-actions"> <img src={item.image} class="card-img" /> </div>
                   </div>
                   <div class="card-body bg-light text-center">
                     <div class="mb-2">
                       <h6 class="font-weight-semibold mb-2"> <a href="#" class="text-default mb-2" data-abc="true">{item.title}</a> </h6>
-                       <a href="#" class="text-muted" data-abc="true">{item.category}</a>
+                      <a href="#" class="text-muted" data-abc="true">{item.category}</a>
                     </div>
-                    <h3 class="mb-0 font-weight-semibold">$250.99</h3>
+                    <h3 class="mb-0 font-weight-semibold">{item.price}$</h3>
                     <div> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> </div>
-                    <div class="text-muted mb-3">34 reviews</div> <button type="button" class="btn bg-cart"><i class="fa fa-cart-plus mr-2"></i> Add to cart</button>
+                    <div class="text-muted mb-3">23</div> <button type="button" class="btn bg-cart"><i class="fa fa-cart-plus mr-2"></i> Add to cart</button>
                   </div>
                 </div>
               </div>
